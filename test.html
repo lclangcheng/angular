@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>测试</title>
+		<script type="text/javascript" src="./lib/angular.js"></script>
+	</head>
+<body kk-test="kk">
+
+	
+<script type="text/javascript">
+
+function encodeUriQuery(val, pctEncodeSpaces) {
+  return encodeURIComponent(val).
+             replace(/%40/gi, '@').
+             replace(/%3A/gi, ':').
+             replace(/%24/g, '$').
+             replace(/%2C/gi, ',').
+             replace(/%3B/gi, ';').
+             replace(/%20/g, (pctEncodeSpaces ? '%20' : '+'));
+}
+console.log(encodeURIComponent("http://tools.ietf.org/html/rfc3986"));
+console.log(encodeUriQuery("http://tools.ietf.org/html/rfc3986"));
+
+var a = document.createElement("a");
+a.src = "http://www.mamicode.com/info-detail-866663.html";
+
+console.log(a.protocol);
+
+var kk = window.document.querySelector("[kk-test]");
+console.log(kk.getAttribute("kk-test"));
+
+
+</script>
+
+</body>
+
+</html>
